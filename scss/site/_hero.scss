@@ -1,7 +1,7 @@
 #homepage-hero {
 	background: url("http://foundation.zurb.com/assets/img/marquee-stars.svg") repeat scroll 0 0 #074E68;
 	padding: rem-calc(20) 0;
-	margin: - rem-calc(32) 0 rem-calc(32);
+	margin: 0;
 	position: relative;
 	text-align: left;
 	height: auto;
@@ -18,3 +18,38 @@
 
 		.download { margin-top: rem-calc(20); }
 	}
+
+.parallax-hero {
+	margin: 0 0 1rem 0;
+	position: relative;
+	text-align: center;
+	height: 400px;
+	width: 100%;
+	background-size: cover !important;
+		h1 { font-weight: 500; color: #fff;}
+
+		h1 a, h4 { color: #fff; }
+}
+
+.parallax-hero-text {
+	height: auto; 
+  text-align: center; 
+	padding: 1rem;
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	
+	div.columns {
+		background-color: rgba(0, 0, 0, .5);
+	}
+	h1, h1 a, h4 {
+		color: white;
+		font-family: 'Oswald', sans-serif !important;
+		text-transform: uppercase;	
+	}
+	h1 a {
+		font-weight: 700;
+		letter-spacing: 5px;
+	}
+
+}

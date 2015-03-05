@@ -22,8 +22,14 @@ figcaption {
 	color: #6f6f6f; 
 }
 
+.panel {
+  border-radius: 5px;
+}
 // Add the alignment classes used by the WordPress media library
 
+.row {
+  margin-top: 1em;
+}
 .alignleft {
 	float: left;
 }
@@ -38,6 +44,10 @@ figcaption {
 	margin-right: auto;
 }
 
+.centered-text {
+	text-align: center;
+}
+
 blockquote.alignleft,
 img.alignleft {
 	margin: rem-calc(7) rem-calc(24) rem-calc(7) 0;
@@ -50,4 +60,132 @@ img.alignleft {
 blockquote.alignright,
 img.alignright {
 	margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
+}
+
+.quote-marks {
+  font-size: 5rem;
+  font-family: Garamond;
+  color: #777;
+}
+
+.move-right {
+  position: relative;
+  text-align: right;
+}
+
+.quote {
+  border-radius: 5px;
+}
+
+.quote p {
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 40em) {
+  .quote p {
+    padding-left: 20px;
+  }
+}
+
+.class-card {
+	.item-wrapper {
+  padding: 20px;
+  border: 2px solid #efefef;
+  border-radius: 7px;
+  margin-top: 40px;
+	}
+	.item-wrapper:hover .img-wrapper img {
+	  -webkit-filter: grayscale(0);
+	}
+	.item-wrapper:hover .img-wrapper .add-to-cart {
+	  bottom: 0;
+	}
+
+	.img-wrapper {
+	  margin-bottom: 20px;
+	  position: relative;
+	  overflow: hidden;
+	}
+	.img-wrapper .add-to-cart {
+	  -webkit-transition: all 0.2s ease;
+	  transition: all 0.2s ease;
+	  background-color: #333;
+	  padding: 16px 8px;
+	  bottom: -50px;
+	  position: absolute;
+	  z-index: 2;
+	  color: #fff;
+	  margin: 0 auto;
+	  border: none;
+	  box-shadow: none;
+	}
+
+	.img-wrapper img {
+	  -webkit-transition: all 0.2s ease;
+	  transition: all 0.2s ease;
+	  -webkit-filter: grayscale(1);
+	  width: 100%;
+	}
+
+	h3 {
+	  font-size: 22px;
+	}
+
+	h5 {
+	  font-weight: bold;
+	}
+
+	p {
+	  color: #888;
+    line-height: inherit;
+	  font-size: 13px;
+	  margin-bottom: 0;
+	}
+}
+
+div.rounded {
+  height: auto;
+  width: auto;
+  padding: 50px;
+  -webkit-border-radius: 300px;
+  -moz-border-radius: 300px;
+  -ms-border-radius: 300px;
+  -o-border-radius: 300px;
+  border-radius: 300px;
+  transition: all .2s linear;
+}
+
+.fa-anchor {
+  color: $sb_red;
+}
+
+.fa-mortar-board {
+  color: $sb_blue;
+}
+
+.fa-ship {
+  color: $sb_orange;
+}
+
+div.rounded:hover {
+  transform: translate(0,-10px);
+}
+
+div.rounded + h3 {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+}
+div.rounded + h3:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width .4s ease, background-color .4s ease;
+}
+div.rounded:hover + h3:after {
+  width: 100%;
+  background: $sb_blue;
 }

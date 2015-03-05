@@ -1,6 +1,19 @@
 // Add some whitespace above the footer for medium-up screens
 @media #{$medium-up} {
-	footer.row {
+	footer.container {
 		margin-top: rem-calc(60);
 	}
 }
+
+footer.container {
+  background: $oil;
+  padding: 24px 0 10px;
+  p {
+    line-height: 1rem !important;
+    padding-bottom: 5px !important;
+  }
+  h4, p {
+    color: white;
+  }
+}
+
